@@ -80,6 +80,7 @@ function Content () {
                         heure: item.heure,
                         lieu: item.lieu,
                         adresse: item.adresse,
+                        commentaire: item.commentaire,
                         codePostal: item.codePostalVille,
                         image: item.image,
                         departement: item.departement,
