@@ -1,5 +1,5 @@
 import styles from './TeaseArticle.module.scss'
-import defaultImage from 'src/assets/sans-image.jpg';
+import defaultImage from '../../assets/sans-image.jpg';
 
 const TeaseArticle = ({article}) => {
     return (
