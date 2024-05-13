@@ -3,12 +3,12 @@ import { Close } from '@mui/icons-material';
 import moment from 'moment'
 import 'moment/dist/locale/fr'
 moment.locale('fr')
-
+import defaultImage from 'src/assets/sans-image.jpg';
 import DrawerWrapper from './DrawerWrapper';
 import styles from './InfoArticle.module.scss'
 
 const InfoArticle = ({ contribution, onClose, onNext }) => {
-    const defaultImage = 'src/assets/sans-image.jpg';
+
     return (
         <DrawerWrapper isOpen={contribution !== undefined} onClose={onClose}>
             { contribution && (

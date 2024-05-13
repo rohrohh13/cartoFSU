@@ -1,7 +1,7 @@
 import styles from './TeaseArticle.module.scss'
+import defaultImage from 'src/assets/sans-image.jpg';
 
 const TeaseArticle = ({article}) => {
-    const defaultImage = 'src/assets/sans-image.jpg';
     return (
         
         <div className={styles.container}>
