@@ -55,13 +55,13 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                             </div>
                         </div>
                         )}
-                        <div>
-                        {contribution.commentaire}
-                        </div>
-                        { contribution.lien && (
-                            <a href={contribution.lien}>En savoir plus</a>
-                        )}
                     </div>
+                    <div>
+                        {contribution.commentaire}
+                    </div>
+                    { contribution.lien && (
+                        <a href={contribution.lien}>En savoir plus</a>
+                    )}
                     <button className={styles.buttonNext} onClick={onNext}>
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="30" cy="30" r="29.5" fill="#1D1D1B" stroke="#1D1D1B"/>
