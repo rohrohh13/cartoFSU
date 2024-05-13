@@ -12,10 +12,15 @@
     }
   }
 .container:before {
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  content: '';
+  height: 50%;
+  width: 100%;
+  background: linear-gradient(0deg, #FFED00 0%, rgba(255, 237, 0, 0.00) 100%);
+  bottom: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+   z-index: 500;
 
 }
 
