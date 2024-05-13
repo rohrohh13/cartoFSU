@@ -77,7 +77,7 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
         </svg> ,
       };
       if (!contribution || !contribution.date) {
-        return <div>Les informations sur l'article ne sont pas disponibles.</div>;
+        return <div></div>;
     }
       const dateDaujourdhui = moment();
       const articleDate = moment(contribution.date, 'DD/MM/YYYY');
