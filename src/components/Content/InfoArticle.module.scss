@@ -6,6 +6,43 @@
     padding-bottom: 115px;
     padding: 30px;
     padding-bottom: 60px;
+    .infoContainerFlex {
+        display: flex;
+        .tagsContainerStatut {
+            background: #92C136; 
+            min-height: 31px;
+            color: #000;
+            text-align: center;
+            font-family: "Source Sans 3", sans-serif;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 11px;
+            display: flex;
+            align-items: center;
+            padding-left: 19px;
+            padding-right: 19px;
+        }
+    }
+    .tagsContainer {
+        display: flex;
+        align-items: center;
+        background: #FFED00; 
+        width: fit-content;
+        padding-left: 4px;
+        min-height: 31px;
+        span {
+            font-family: "Londrina Solid", sans-serif;
+            color: #000;
+            font-family: "Londrina Solid";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 11px; /* 61.111% */
+            letter-spacing: 0.9px;
+            text-transform: uppercase; 
+        }
+    }
     h2 {
         margin: 0;
         padding-bottom: 30px;

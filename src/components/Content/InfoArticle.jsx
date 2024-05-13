@@ -8,6 +8,10 @@ import DrawerWrapper from './DrawerWrapper';
 import styles from './InfoArticle.module.scss'
 
 const InfoArticle = ({ contribution, onClose, onNext }) => {
+
+
+
+
     const categorySVGs = {
         "Tractage": <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.22705 2.93128H2.96595V5.19238V23.2812V25.5423H5.22705H23.3159H25.577V23.2812V5.19238V2.93128H23.3159H5.22705Z" fill="#" stroke="#" stroke-width="4.5222"/>
@@ -71,16 +75,44 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
         <path d="M19.4042 13.1751C20.7917 13.1751 21.9165 12.0502 21.9165 10.6627C21.9165 9.2752 20.7917 8.15039 19.4042 8.15039C18.0167 8.15039 16.8918 9.2752 16.8918 10.6627C16.8918 12.0502 18.0167 13.1751 19.4042 13.1751Z" stroke="black" stroke-width="1.25617" stroke-linecap="round" stroke-linejoin="round"/>
         </svg> ,
       };
-
+      if (!contribution || !contribution.date) {
+        return <div>Les informations sur l'article ne sont pas disponibles.</div>;
+    }
+      const dateDaujourdhui = moment();
+      const articleDate = moment(contribution.date, 'DD/MM/YYYY');
+      let etatArticle = '';
+    
+      if (articleDate.isBefore(dateDaujourdhui, 'day')) {
+        etatArticle = 'Passé';
+      } else if (articleDate.isAfter(dateDaujourdhui, 'day')) {
+        etatArticle = 'À venir';
+      } else {
+        etatArticle = "Aujourd'hui";
+      }
+   
     return (
+
+
+      
+
         <DrawerWrapper isOpen={contribution !== undefined} onClose={onClose}>
+
+
+
+            
             { contribution && (
+                
                 <div className={styles.infoContainer}>
-                    
-                    <div className={styles.tagsContainer}>
-                        {contribution.categoriesName}
-                        {categorySVGs[contribution.categoriesName]} 
+                    <div className={styles.infoContainerFlex}>
+                        <div className={styles.tagsContainer}>
+                            <span>{contribution.categoriesName}</span>
+                            {categorySVGs[contribution.categoriesName]} 
+                        </div>
+                        <div className={styles.tagsContainerStatut}>
+                            {etatArticle}
+                        </div>
                     </div>
+                    
                     <div className={styles.titleContainer}>
                         <h2>{parse(contribution.title)}</h2>                         
                     </div>
