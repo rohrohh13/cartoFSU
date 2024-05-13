@@ -1,0 +1,101 @@
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0px;
+    background: rgba(29, 29, 27, 0.70);
+    z-index: 9999;
+    color: #1D1D1B;
+    min-height: 100vh;
+    display: flex;
+    .containerFiltre {
+        position: relative;
+        border-radius: 4px;
+        padding: 60px 50px;
+        background: #FFF; 
+        width: 800px;
+        margin: 0 auto;
+        height: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+        div {
+            padding-bottom: 33px;
+            align-items: center;
+            display: flex;
+            h2 {
+                color: rgba(29, 29, 27, 0.80); 
+                font-family: "Source Sans 3", sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 110%;
+                padding-right: 20px;
+                margin: 0;
+                
+            }            
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-flex;
+                align-items: center;
+                margin-right: 15px;
+                background: #FFED00; 
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                color: #000;
+                font-family: "Londrina Solid", sans-serif;
+                font-size: 22.611px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 13.818px; /* 61.111% */
+                letter-spacing: 1.131px;
+                padding: 5px 10px;
+                cursor: pointer;
+                transition: all 0.3s;
+                min-height: 30px;
+                text-transform: uppercase; 
+            }
+        }
+    }
+    .closeFilters {
+        position: absolute;
+        top: 25px;
+        right:25px;
+        cursor: pointer;
+        transition: all 0.3s;
+            .closeBtnCircle {
+                transition: all 0.3s;
+            }
+            .closeBtnStroke {
+                transition: all 0.3s;
+            }
+            &:hover {
+                .closeBtnCircle {
+                    fill: var(--color-black);
+                }
+                .closeBtnStroke {
+                    stroke: var(--color-yellow);
+                }
+            }
+    }
+}
+
+@media (max-width: 992px) {
+
+    .container {
+        width: calc(100% - 40px);  
+        max-width: unset;
+        padding-right:20px;
+        top:10px;
+        left:10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+}

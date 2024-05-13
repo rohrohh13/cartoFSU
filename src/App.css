@@ -1,0 +1,77 @@
+body {
+    margin: 0;   
+}
+
+@font-face {
+    font-family: 'Morenga';
+    src: url('./fonts/moranga-regular.woff2') format('woff2'),
+         url('./fonts/moranga-regular.woff') format('woff'),
+
+}
+
+.marker-cluster div {
+  text-align: center;
+  font-family: "Londrina Solid", sans-serif ! important;
+  font-size: 21px ! important;
+  color: #fff ! important;
+}
+
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+    background-color: rgba(255, 75, 86, 0.6) ! important;
+  }
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+    background-color: rgba(255, 75, 86, 0.8) ! important;
+  }
+
+  #path1 {
+    stroke-dasharray: 170;
+    -webkit-animation: animate1 20s infinite; /* Chrome, Safari, Opera */ 
+    animation: animate1 40s infinite;
+  }
+
+  .leaflet-popup {
+    left: 30px !important;
+    bottom: -22px !important;
+    margin-bottom:0;
+  }
+  .leaflet-popup-content {
+    margin: 10px;
+  }
+  .leaflet-popup-content-wrapper, 
+  .leaflet-popup-tip {
+    border-radius: 4px;
+  }
+  .leaflet-popup-tip-container,
+  .leaflet-popup-close-button {
+    display: none;
+  }
+  
+  @keyframes animate1 {
+       to {
+      stroke-dashoffset: 1000;
+    }
+  }
+  
+  @-moz-keyframes animate1 {
+       to {
+      stroke-dashoffset: 1000;
+    }
+  }
+  
+  @-webkit-keyframes animate1 {
+       to {
+      stroke-dashoffset: 1000;
+    }
+  }
+
+@media (max-width: 992px) {
+    body {
+        background-color: unset;
+    }
+}
+
+

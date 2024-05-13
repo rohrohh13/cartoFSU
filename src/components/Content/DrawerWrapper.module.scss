@@ -1,0 +1,60 @@
+.infoDrawer {
+    pointer-events: none;
+    position: relative;
+    z-index: 9000;
+    
+
+    .drawerPaper {
+        pointer-events: initial;
+        max-width: 552px;
+        min-width: 552px;
+        border-radius: 4px;
+        background: #FFF;
+        top:0px;
+        overflow: inherit;
+        left:0px;      
+    }
+    .closeBtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 21px;
+        height: 21px;
+        border-radius: 50%;
+        color: var(--color-black);
+        background-color: var(--color-yellow);
+        cursor: pointer;
+        transition: all 0.3s;
+        .closeBtnCircle {
+            transition: all 0.3s;
+        }
+        .closeBtnStroke {
+            transition: all 0.3s;
+        }
+        &:hover {
+            .closeBtnCircle {
+                fill: var(--color-black);
+            }
+            .closeBtnStroke {
+                stroke: var(--color-yellow);
+            }
+        }
+    }
+    .drawerContent {
+        overflow: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .infoDrawer {
+        .drawerPaper {
+            right: 10px;
+            top: 10px;
+            left:10px;
+            width: calc(100% - 30px);
+            min-width: unset;
+            padding: 36px 0px 50px 10px;
+            max-width: 100%;
+        }
+    }
+}

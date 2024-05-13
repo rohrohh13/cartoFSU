@@ -1,0 +1,98 @@
+.MuiDrawer-root {
+    z-index: 9000 !important;
+}
+
+.infoContainer {
+    padding-bottom: 115px;
+    padding: 30px;
+    h2 {
+        margin: 0;
+        padding-bottom: 30px;
+        color: #1D1D1B;
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%;
+        padding-top: 25px;
+    }
+    .infoArticleContainerContent {
+        background: rgba(29, 29, 27, 0.10);
+        color: rgba(29, 29, 27, 0.50);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+        padding: 5px;
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 14.352px;
+        font-style: normal;
+        width: fit-content;
+        font-weight: 600;
+        line-height: 15.788px; 
+    }
+
+    .infoArticleContainerLesInfos {
+        background: #FF4B56; 
+        display: flex;
+        padding: 19px 25px 19px 25px;
+        color: #FFF;
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px; 
+        .infoArticleContainerDate {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 10px;
+            }
+        }
+        .infoArticleContainerLieu {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            svg {
+                margin-right: 10px;
+            }        
+        }
+    }
+
+
+    .buttonNext {
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        right: -80px;
+        background-color: unset;
+        border: unset;
+        transition: all 0.3s;
+        z-index: 9000;
+        svg {
+            .buttonNextPath {
+                transition: all 0.3s;
+            }           
+        }
+        &:hover {
+            svg {
+                .buttonNextPath {
+                    fill: #FFEB81;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    .infoContainer {
+        padding-right: 10px;
+        .titleContainer {
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+}

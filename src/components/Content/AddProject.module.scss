@@ -1,0 +1,40 @@
+.addProjectDiv {
+    color: #FFF;   
+    text-align: center;   
+    padding-right: 20px;  
+    h2 {
+        margin: 0;
+        padding-bottom: 30px;
+        color: #FFEB81;
+        font-family: 'Editorial-Bold';
+        text-align: center;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 110%; /* 44px */
+        letter-spacing: 0.8px;
+        text-transform: uppercase;             
+    }   
+    p {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal; 
+        font-family: 'Satoshi-Variable';
+        a {
+            color: #FFEB81; 
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    .addProjectDiv {
+            h2 {
+                font-size: 30px;
+            }
+    }
+}

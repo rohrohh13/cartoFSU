@@ -1,0 +1,13 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  --color-black: #1D1D1B;
+  --color-yellow: #FFED00;
+}
+
+ul {
+  list-style-type: none;
+}
