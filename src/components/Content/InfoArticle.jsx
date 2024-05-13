@@ -37,9 +37,10 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                                 </svg> 
                             </div>
                             <div>
-                                {moment(contribution.date).format('Do MMMM YYYY')} - {contribution.heure}
+                                {moment(contribution.date, 'DD/MM/YYYY').format('Do MMMM YYYY')} - {contribution.heure}
                             </div>           
                         </div>
+
                         )}
                         { contribution.adresse && (
                         <div className={styles.infoArticleContainerLieu}>
