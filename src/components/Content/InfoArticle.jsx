@@ -56,9 +56,11 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                         </div>
                         )}
                     </div>
+                    { contribution.commentaire && (
                     <div className={styles.infoArticleCommentaire}>
                         {contribution.commentaire}
                     </div>
+                    )}
                     { contribution.lien && (
                         <div className={styles.infoArticleLien}>
                             <a href={contribution.lien}>En savoir plus</a>
