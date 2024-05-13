@@ -21,7 +21,7 @@ function Content () {
     const [selectedArticleIndex, setSelectedArticleIndex] = useState(false)
     const [selectedCategoriesId, setSelectedCategoriesId] = useState([])
     const [isLoading, setIsLoading] = useState(true);
-    
+    const [isDomSelected, setIsDomSelected] = useState(false)
     const {currentNav, setCurrentNav} = useNavStore()
 
     let hasFetch = createRef()
@@ -41,9 +41,10 @@ function Content () {
         }
     }, [selectedArticleIndex])
 
+
     useEffect(() => {
         if(contributions.length && paramArticle) {
-            const articleIndex = contributions.findIndex((item) => item.articleId === paramArticle )
+            const articleIndex = contributions.findIndex((item) => parseInt(item.id) === paramArticle )
             if(articleIndex !== -1) setSelectedArticleIndex(articleIndex)
         }
     }, [contributions])
@@ -69,7 +70,7 @@ function Content () {
                     hasNextPage = false
                 } else {
                     const formatedContribs = data.map(item => ({
-                        id: item.articleId,
+                        id: parseInt(item.id),
                         title: item.titre,
                         categories: item.typeActionId,
                         categoriesName: item.typeAction,
