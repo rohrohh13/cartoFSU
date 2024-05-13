@@ -79,6 +79,7 @@ function Content () {
                         date: item.date,
                         heure: item.heure,
                         lieu: item.lieu,
+                        lien: item.lienEnSavoirPlus,      
                         adresse: item.adresse,
                         commentaire: item.commentaire,
                         codePostal: item.codePostalVille,
