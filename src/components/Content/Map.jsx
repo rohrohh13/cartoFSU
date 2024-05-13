@@ -1,5 +1,5 @@
 import parse from 'html-react-parser'
-import React, { useRef } from 'react'; // Ajout de React et useRef
+import React, { useRef, useEffect } from 'react'; // Ajout de React et useRef
 import marqueur from '../../assets/marker-icon-2x.png'
 import marqueurUn from '../../assets/assemblee-generale.png'
 import marqueurDeux from '../../assets/audience.png'
@@ -14,7 +14,7 @@ import MarkerClusterGroup from 'react-leaflet-cluster'
 import { MapContainer, TileLayer, Marker, ZoomControl,Popup } from 'react-leaflet'
 import styles from './Map.module.scss'
 
-const Map = ({ contributions, selectedCategoriesId, onClickMarqueur }) => {
+const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArticleIndex }) => {
     const BoatIcon = L.icon({
         iconUrl: marqueur,
         iconSize: [25,41],
@@ -67,16 +67,19 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur }) => {
     });
     const mapRef = useRef(); // Création d'une référence à la carte
 
-    const handleMarkerClick = (index) => {
-        onClickMarqueur(index);
-        const contribution = contributions[index];
-        const { lat, lng } = contribution.latlong;
-        if (mapRef.current) {
-            mapRef.current.flyTo([lat, lng], 12, {
-                duration: 0.5 // Réglage de la durée de l'animation (en secondes)
-            });
+    useEffect(() => {
+        
+        if(selectedArticleIndex !== false) {
+            const contribution = contributions[selectedArticleIndex];
+            if(contribution && mapRef.current) {
+                const { lat, lng } = contribution.latlong;
+                mapRef.current.flyTo([lat, lng], 12, {
+                    duration: 0.5 // Réglage de la durée de l'animation (en secondes)
+                });
+            }
+            
         }
-    };
+    }, [selectedArticleIndex])
 
     return (
         <MapContainer attributionControl={false} className={styles.container} center={[46.227638, 2.213749]} zoom={6} minZoom={3} maxZoom={15} scrollWheelZoom={true} zoomControl={false} ref={mapRef}>
@@ -119,7 +122,7 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur }) => {
                     }
 
                     if(selectedCategoriesId.length === 0 || selectedCategoriesId.some((catId) => contribution.categories === catId)) {
-                        return <Marker icon={icon} eventHandlers={{ click: () => handleMarkerClick(index), mouseover: (event) => event.target.openPopup(), mouseout: (event) => event.target.closePopup()}} key={index} position={[contribution.latlong.lat, contribution.latlong.lng]}><Popup><div className={styles.popupContainer}><div className={styles.containerInfo}><div>{contribution.categories.typeAction}</div><h2>{parse(contribution.title)}</h2><h3>{contribution.subtitle}</h3></div></div></Popup></Marker>
+                        return <Marker icon={icon} eventHandlers={{ click: () => onClickMarqueur(index), mouseover: (event) => event.target.openPopup(), mouseout: (event) => event.target.closePopup()}} key={index} position={[contribution.latlong.lat, contribution.latlong.lng]}><Popup><div className={styles.popupContainer}><div className={styles.containerInfo}><div>{contribution.categories.typeAction}</div><h2>{parse(contribution.title)}</h2><h3>{contribution.subtitle}</h3></div></div></Popup></Marker>
                     }
                     return null;
                 })}

@@ -4,8 +4,6 @@ import Map from "./Map"
 import InfoArticle from './InfoArticle'
 import LastArticles from './LastArticles'
 import Filters from './Filters'
-import About from './About'
-import AddProject from './AddProject'
 
 import { useNavStore } from '../../NavStore'
 
@@ -151,12 +149,10 @@ function Content () {
 
     return (
         <div>
-            <Map contributions={contributions} selectedCategoriesId={selectedCategoriesId} onClickMarqueur={index => setSelectedArticleIndex(index)}/>
+            <Map contributions={contributions} selectedCategoriesId={selectedCategoriesId} onClickMarqueur={index => setSelectedArticleIndex(index)} selectedArticleIndex={selectedArticleIndex}/>
             <LastArticles contributions={contributions.slice(0, 3)} onClickVignette={index => setSelectedArticleIndex(index)}/>
             <InfoArticle contribution={contributions[selectedArticleIndex]} onClose={() => setSelectedArticleIndex(false) } onNext={goToNext}/>
             {categories.length && currentNav === 'filters' && <Filters categories={categories} selectedCategoriesId={selectedCategoriesId} onSelected={toggleFilter} unSelect={displayAllContributions}/>}
-            <About isOpen={currentNav === 'about'} />
-            <AddProject isOpen={currentNav === 'addProject'} />
         </div>    
     )
 }
