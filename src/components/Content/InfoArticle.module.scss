@@ -5,7 +5,7 @@
 .infoContainer {
     padding-bottom: 115px;
     padding: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
     .infoContainerFlex {
         display: flex;
         .containerInfoDeux {
@@ -131,7 +131,41 @@
             padding-top: 20px;
             padding-bottom: 20px;
             font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
             line-height: 0;
+            &:hover {
+                text-decoration: none;
+                color: #FFED00;
+                background-color: #000;
+            }
+        }
+    }
+    .blocPartageArticle {
+        text-align: center;
+        background: #000; 
+        padding-top: 26px;
+        margin-top: 40px;
+        margin-left: -30px;
+        margin-right: -30px;
+        padding-bottom: 40px;
+        p {
+            margin: 0;
+            padding-bottom: 30px;
+            font-family: "Source Sans 3", sans-serif;
+            color: rgba(255, 255, 255, 0.60); 
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 110%; 
+        }
+        svg {
+            margin-left: 11px;
+            margin-right: 11px;
+            transition: all 0.3s;
+            &:hover {
+                opacity: 0.7;
+            }
         }
     }
 
