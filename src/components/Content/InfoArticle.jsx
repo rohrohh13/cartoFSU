@@ -109,8 +109,10 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                             <span>{contribution.categoriesName}</span>
                             {categorySVGs[contribution.categoriesName]} 
                         </div>
-                        <div className={styles.tagsContainerStatut}>
-                            {etatArticle}
+                        <div className={`${styles.containerInfoDeux} ${etatArticle === 'Passé' ? styles.past : etatArticle === 'À venir' ? styles.future : styles.today}`}>
+
+                    
+                                {etatArticle}
                         </div>
                     </div>
                     

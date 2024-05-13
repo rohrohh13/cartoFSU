@@ -8,8 +8,8 @@
     padding-bottom: 60px;
     .infoContainerFlex {
         display: flex;
-        .tagsContainerStatut {
-            background: #92C136; 
+        .containerInfoDeux {
+ 
             min-height: 31px;
             color: #000;
             text-align: center;
@@ -22,6 +22,17 @@
             align-items: center;
             padding-left: 19px;
             padding-right: 19px;
+            &.past {
+                background: rgba(0, 0, 0, 0.10);
+            }
+          
+            &.future {
+                background: #92C136;
+            }
+          
+            &.today {
+              // Styles pour l'état "Aujourd'hui"
+            }
         }
     }
     .tagsContainer {

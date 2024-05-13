@@ -25,7 +25,7 @@ const TeaseArticle = ({article}) => {
             <div className={styles.containerInfo}>
                 <div>
                     <span className={styles.containerInfoUn}>{article.categoriesName}</span>
-                    <span className={styles.containerInfoDeux}>{etatArticle}</span>
+                    <span className={`${styles.containerInfoDeux} ${etatArticle === 'Passé' ? styles.past : etatArticle === 'À venir' ? styles.future : styles.today}`}>{etatArticle}</span>
                 </div>       
                 <h2>{article.title && article.title.length > 26 ? `${article.title.substring(0, 26)}...` : article.title}</h2>
                 <h3>{article.departement}</h3>

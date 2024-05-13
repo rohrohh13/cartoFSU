@@ -63,6 +63,19 @@
         font-style: normal;
         font-weight: 600;
         line-height: 11px; 
+
+            &.past {
+                background: rgba(0, 0, 0, 0.10);
+            }
+          
+            &.future {
+              // Styles pour l'état "À venir"
+            }
+          
+            &.today {
+              // Styles pour l'état "Aujourd'hui"
+            }
+
     }
 }
 
