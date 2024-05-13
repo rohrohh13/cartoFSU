@@ -136,7 +136,7 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                                 </svg> 
                             </div>
                             <div>
-                                {moment(contribution.date, 'DD/MM/YYYY').format('Do MMMM YYYY')} - {contribution.heure}
+                                {moment(contribution.date, 'DD/MM/YYYY').format('Do MMMM YYYY')} - {contribution.heure.slice(0, -3)}
                             </div>           
                         </div>
 
