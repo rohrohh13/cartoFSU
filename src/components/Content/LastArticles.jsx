@@ -18,7 +18,7 @@ const LastArticles = ({contributions, onClickVignette}) => {
                 })}
                 <div className={styles.containerLinks}>
                     <p>Rejoignez vous aussi <br/>le collectif !</p>
-                    <a href="" target="_blank">
+                    <a href="https://adherer.snuipp.fr/" target="_blank">
                         Je me syndique
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.25998 7.19487C9.25998 7.61331 9.09375 8.01461 8.79787 8.3105C8.50199 8.60638 8.10068 8.77261 7.68224 8.77261C7.26379 8.77261 6.86249 8.60638 6.5666 8.3105C6.27072 8.01461 6.10449 7.61331 6.10449 7.19487V4.56529C6.10449 4.14685 6.27072 3.74554 6.5666 3.44966C6.86249 3.15377 7.26379 2.98755 7.68224 2.98755C8.10068 2.98755 8.50199 3.15377 8.79787 3.44966C9.09375 3.74554 9.25998 4.14685 9.25998 4.56529V7.19487Z" stroke="black" stroke-width="0.934959" stroke-linecap="round" stroke-linejoin="round"/>

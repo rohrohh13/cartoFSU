@@ -43,7 +43,7 @@ function Content () {
 
     useEffect(() => {
         if(contributions.length && paramArticle) {
-            const articleIndex = contributions.findIndex((item) => item.id === paramArticle )
+            const articleIndex = contributions.findIndex((item) => item.articleId === paramArticle )
             if(articleIndex !== -1) setSelectedArticleIndex(articleIndex)
         }
     }, [contributions])
@@ -71,7 +71,6 @@ function Content () {
                     const formatedContribs = data.map(item => ({
                         id: item.articleId,
                         title: item.titre,
-                        statut: item.statut,
                         categories: item.typeActionId,
                         categoriesName: item.typeAction,
                         date: item.date,

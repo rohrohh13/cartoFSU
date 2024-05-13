@@ -2,6 +2,7 @@ import parse from 'html-react-parser'
 import { Close } from '@mui/icons-material';
 import moment from 'moment'
 import 'moment/dist/locale/fr'
+
 moment.locale('fr')
 import defaultImage from '../../assets/sans-image.jpg';
 import DrawerWrapper from './DrawerWrapper';
