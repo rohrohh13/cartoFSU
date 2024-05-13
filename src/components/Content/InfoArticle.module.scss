@@ -58,7 +58,33 @@
             }        
         }
     }
-
+    .infoArticleCommentaire {
+        padding-top: 20px;
+        color: #1D1D1B;
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal; 
+    }
+    .infoArticleLien {
+        padding-top: 40px;
+        a {
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+            background: #FFED00; 
+            text-align: center;
+            color: #000; 
+            font-family: "Source Sans 3", sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-weight: 600;
+            line-height: 0;
+        }
+    }
 
     .buttonNext {
         position: absolute;

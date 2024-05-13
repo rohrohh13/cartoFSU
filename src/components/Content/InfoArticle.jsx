@@ -56,11 +56,13 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                         </div>
                         )}
                     </div>
-                    <div>
+                    <div className={styles.infoArticleCommentaire}>
                         {contribution.commentaire}
                     </div>
                     { contribution.lien && (
-                        <a href={contribution.lien}>En savoir plus</a>
+                        <div className={styles.infoArticleLien}>
+                            <a href={contribution.lien}>En savoir plus</a>
+                        </div>
                     )}
                     <button className={styles.buttonNext} onClick={onNext}>
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
