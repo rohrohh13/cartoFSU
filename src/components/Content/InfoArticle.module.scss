@@ -198,11 +198,33 @@
 
 @media (max-width: 992px) {
     .infoContainer {
+
+        padding-top: 12px;
+        padding-left: 10px;
         padding-right: 10px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
         .titleContainer {
             h2 {
                 font-size: 30px;
             }
+        }
+        .infoArticleContainerLesInfos {
+            display: block;
+            .infoArticleContainerDate {
+                padding-bottom: 10px;
+                width: 100%;
+            }
+            .infoArticleContainerLieu {
+                width: 100%;
+            }
+        }
+        .blocPartageArticle {
+            margin-left: -10px;
+            margin-right: -10px;
         }
     }
 }
