@@ -47,18 +47,7 @@
 
 @media (max-width: 992px) {
     .navContainer {
-        button {
-            text-indent: -9999px;
-            border: 1.385px solid #1D1D1B !important; 
-            svg {
-                margin-left:0;
-            }
-        }
-        .addProjectDiv {
-            width: calc(100% - 40px);
-        }
-        .aboutDiv {
-            width: calc(100% - 40px);  
-        }
+
+
     }
 }
