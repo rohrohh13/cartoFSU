@@ -49,11 +49,23 @@
     .navContainer {
         position: absolute;
         right: 0;
+        display: flex;
+        align-items: center;
         .navButton {
             margin-top: 15px;
             text-indent: -9999px; 
+            height: 30px;
             svg {
                 margin-left:0;
+            }
+        }
+        div {
+            button {
+                font-size: 10px;
+                margin-left: 5px;
+                height: 30px;
+                padding-top: 15px;
+                padding-bottom: 15px;
             }
         }
     }
