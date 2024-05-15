@@ -21,8 +21,7 @@ function Content () {
     const [selectedArticleIndex, setSelectedArticleIndex] = useState(false)
     const [selectedCategoriesId, setSelectedCategoriesId] = useState([])
     const [isLoading, setIsLoading] = useState(true);
-    const [isDomSelected, setIsDomSelected] = useState(false)
-    const {currentNav, setCurrentNav} = useNavStore()
+    const {currentNav, setCurrentNav, isDomSelected} = useNavStore()
 
     let hasFetch = createRef()
 
@@ -149,7 +148,7 @@ function Content () {
 
     return (
         <div>
-            <Map contributions={contributions} selectedCategoriesId={selectedCategoriesId} onClickMarqueur={index => setSelectedArticleIndex(index)} selectedArticleIndex={selectedArticleIndex}/>
+            <Map contributions={contributions} isDomSelected={isDomSelected} selectedCategoriesId={selectedCategoriesId} onClickMarqueur={index => setSelectedArticleIndex(index)} selectedArticleIndex={selectedArticleIndex}/>
             <LastArticles contributions={contributions.slice(0, 3)} onClickVignette={index => setSelectedArticleIndex(index)}/>
             <InfoArticle contribution={contributions[selectedArticleIndex]} onClose={() => setSelectedArticleIndex(false) } onNext={goToNext}/>
             {categories.length && currentNav === 'filters' && <Filters categories={categories} selectedCategoriesId={selectedCategoriesId} onSelected={toggleFilter} unSelect={displayAllContributions}/>}

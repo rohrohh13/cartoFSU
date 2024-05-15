@@ -14,7 +14,8 @@ import MarkerClusterGroup from 'react-leaflet-cluster'
 import { MapContainer, TileLayer, Marker, ZoomControl,Popup } from 'react-leaflet'
 import styles from './Map.module.scss'
 
-const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArticleIndex }) => {
+const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArticleIndex, isDomSelected }) => {
+    
     const BoatIcon = L.icon({
         iconUrl: marqueur,
         iconSize: [25,41],
@@ -81,6 +82,18 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArt
         }
     }, [selectedArticleIndex])
 
+    useEffect(() => {
+        if(mapRef.current) {
+            if(isDomSelected) {
+                //mapRef.current.setZoom(2)
+                mapRef.current.fitWorld()
+            }
+            else {
+                mapRef.current.flyTo([46.227638, 2.213749], 6, {duration: 0.5})
+            }
+        }
+    }, [isDomSelected])
+
     return (
         <MapContainer attributionControl={false} className={styles.container} center={[46.227638, 2.213749]} zoom={6} minZoom={3} maxZoom={15} scrollWheelZoom={true} zoomControl={false} ref={mapRef}>
             <TileLayer
@@ -96,7 +109,14 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArt
             }}>
                 {contributions.map((contribution, index) => {
 
-
+                    const isDom = ['97', '98'].includes(contribution.departement.slice(0,2))
+                    
+                    if(isDomSelected) {
+                       if(!isDom) return null
+                    } else {
+                        if(isDom) return null
+                    }
+                    
                     let icon;
                     // Logique pour choisir l'icône en fonction du nom de la catégorie
                     if (contribution.categoriesName === "Tractage") {
