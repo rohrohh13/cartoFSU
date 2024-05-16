@@ -80,7 +80,7 @@ function Content () {
                         adresse: item.adresse,
                         commentaire: item.commentaire,
                         codePostal: item.codePostal,
-                        codeVille: item.ville,
+                        ville: item.ville,
                         image: item.image,
                         departement: item.departement,
                         latlong: {
