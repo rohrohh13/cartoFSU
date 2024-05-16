@@ -166,7 +166,7 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                                 </svg>
                             </div>
                             <div>
-                                {contribution.lieu}<br/>{contribution.adresse}<br/>{contribution.codePostal} {contribution.ville}                       
+                                {contribution.lieu}<br/>{contribution.adresse}<br/>{contribution.codePostal}&nbsp;{contribution.ville}                       
                             </div>
                         </div>
                         )}
