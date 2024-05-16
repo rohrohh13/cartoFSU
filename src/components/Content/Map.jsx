@@ -11,7 +11,8 @@ import marqueurSept from '../../assets/stage.png'
 import marqueurHuit from '../../assets/tour-de-france.png'
 import marqueurNeuf from '../../assets/tractage.png'
 import MarkerClusterGroup from 'react-leaflet-cluster'
-import { MapContainer, TileLayer, Marker, ZoomControl,Popup } from 'react-leaflet'
+import departementsJson from '../../geojson/departements.json'
+import { MapContainer, TileLayer, Marker, ZoomControl,Popup,GeoJSON,Tooltip } from 'react-leaflet'
 import styles from './Map.module.scss'
 
 const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArticleIndex, isDomSelected }) => {
@@ -67,6 +68,10 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArt
         iconAnchor: [12, 30],
     });
     const mapRef = useRef(); // Création d'une référence à la carte
+    const layerStyle = ({
+          weight: 1,
+          opacity: 0.5,
+        });
 
     useEffect(() => {
         
@@ -100,6 +105,7 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArt
                 attribution= '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
+            
             <MarkerClusterGroup chunkedLoading polygonOptions={{
                 fillColor: 'rgba(255, 235, 129, 0)',
                 color: 'rgba(255, 235, 129, 0)',
