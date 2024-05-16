@@ -125,13 +125,13 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArt
                         icon = Reunion;
                     } else if (contribution.categoriesName === "Audience") {
                         icon = Audience;
-                    } else if (contribution.categoriesName === "Tour de France") {
+                    } else if (contribution.categoriesName === "Tour de France des écoles") {
                         icon = Tour;
                     } else if (contribution.categoriesName === "Stage") {
                         icon = Stage;
-                    } else if (contribution.categoriesName === "Ris") {
+                    } else if (contribution.categoriesName === "RIS") {
                         icon = Ris;
-                    } else if (contribution.categoriesName === "Manifestation") {
+                    } else if (contribution.categoriesName === "Manifestation / Rassemblement") {
                         icon = Manif;
                     } else if (contribution.categoriesName === "Conférence de presse") {
                         icon = Conference;
