@@ -29,7 +29,7 @@ const Filters = ({categories, selectedCategoriesId, onSelected, unSelect}) => {
         <path d="M13.2561 18.7377L13.8842 18.1096" stroke="black" stroke-width="1.25617" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M13.9625 13.988L8.35293 21.6428C8.26433 21.7637 8.22188 21.9123 8.23326 22.0617C8.24463 22.2112 8.30908 22.3517 8.41495 22.4577L9.53765 23.5804C9.64374 23.6863 9.7842 23.7508 9.93365 23.7621C10.0831 23.7735 10.2317 23.7311 10.3526 23.6425L18.0058 18.0313" stroke="black" stroke-width="1.25617" stroke-linecap="round" stroke-linejoin="round"/>
         </svg> ,
-        "Tour de France": <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        "Tour de France des écoles": <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M22.5068 4.38312V2.38312H20.5068H4.50684H2.50684V4.38312V20.3831V22.3831H4.50684H20.5068H22.5068V20.3831V4.38312Z" fill="#" stroke="#" stroke-width="4"/>
         <path d="M14.6695 9.08144C15.3378 9.08144 15.8797 8.5441 15.8797 7.88127C15.8797 7.21843 15.3378 6.68109 14.6695 6.68109C14.0011 6.68109 13.4592 7.21843 13.4592 7.88127C13.4592 8.5441 14.0011 9.08144 14.6695 9.08144Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M16.8477 17.2427C17.9172 17.2427 18.7841 16.3829 18.7841 15.3224C18.7841 14.2618 17.9172 13.4021 16.8477 13.4021C15.7783 13.4021 14.9114 14.2618 14.9114 15.3224C14.9114 16.3829 15.7783 17.2427 16.8477 17.2427Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
@@ -49,7 +49,7 @@ const Filters = ({categories, selectedCategoriesId, onSelected, unSelect}) => {
         <path d="M10.025 14.2317L9.2627 12.9255" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12.4556 10.2348V14.2348" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
         </svg> ,
-        "Manifestation": <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        "Manifestation / Rassemblement": <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.89307 3.43542H3.38073V5.94775V26.0464V28.5588H5.89307H25.9917H28.5041V26.0464V5.94775V3.43542H25.9917H5.89307Z" fill="#" stroke="#" stroke-width="5.02467"/>
         <path d="M9.66138 23.5341V10.9724" stroke="black" stroke-width="1.25617" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M9.66138 19.8314C14.2293 15.7087 17.6552 23.9542 22.223 19.8314V10.9062C17.6552 15.0289 14.2293 6.78347 9.66138 10.9062" stroke="black" stroke-width="1.25617" stroke-linecap="round" stroke-linejoin="round"/>
