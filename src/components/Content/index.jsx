@@ -79,7 +79,8 @@ function Content () {
                         lien: item.lienEnSavoirPlus,      
                         adresse: item.adresse,
                         commentaire: item.commentaire,
-                        codePostal: item.codePostalVille,
+                        codePostal: item.codePostal,
+                        codeVille: item.ville,
                         image: item.image,
                         departement: item.departement,
                         latlong: {
