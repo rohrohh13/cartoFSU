@@ -129,7 +129,7 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArt
                         icon = Tour;
                     } else if (contribution.categoriesName === "Stage") {
                         icon = Stage;
-                    } else if (contribution.categoriesName === "RIS") {
+                    } else if (contribution.categoriesName === "Ris") {
                         icon = Ris;
                     } else if (contribution.categoriesName === "Manifestation / Rassemblement") {
                         icon = Manif;
