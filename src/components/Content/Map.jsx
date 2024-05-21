@@ -15,8 +15,7 @@ import departementsJson from '../../geojson/departements.json'
 import { MapContainer, TileLayer, Marker, ZoomControl,Popup,GeoJSON,Tooltip } from 'react-leaflet'
 import styles from './Map.module.scss'
 
-const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArticleIndex, isDomSelected }) => {
-    
+const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarqueur, selectedArticleIndex, isDomSelected }) => {
     const BoatIcon = L.icon({
         iconUrl: marqueur,
         iconSize: [25,41],
@@ -68,6 +67,11 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArt
         iconAnchor: [12, 30],
     });
     const mapRef = useRef(); // Création d'une référence à la carte
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const paramDepartement = parseInt(urlParams.get('departementCode'));
+
+
     const departementLocations = {
         "01": { name: "Ain", lat: 46.25, lng: 5.75, zoom: 10 },
         "02": { name: "Aisne", lat: 49, lng: 3.5, zoom: 9 },
@@ -200,21 +204,16 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArt
     }, [isDomSelected])
 
     useEffect(() => {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const paramDepartement = parseInt(urlParams.get('departementCode'));
 
-        console.log('Query String:', queryString); // Debugging log
-        console.log('URL Params:', urlParams.toString()); // Debugging log
-        console.log('Departement Code:', paramDepartement); // Debugging log
 
-        // Debugging to ensure paramDepartement and mapRef.current are defined
+        console.log('Departement Code:', paramDepartement);
+
         if (paramDepartement && mapRef.current) {
             console.log('paramDepartement is defined and mapRef.current is not null.');
             console.log('Departement Code:', paramDepartement); 
             const location = departementLocations[paramDepartement];
 
-            
+  
             if (location) {
                 console.log('Location found for departement code:', paramDepartement);
                 mapRef.current.flyTo([location.lat, location.lng], location.zoom);
@@ -224,10 +223,10 @@ const Map = ({ contributions, selectedCategoriesId, onClickMarqueur, selectedArt
             }
         } else {
 
-            
-            console.log('paramDepartement or mapRef.current is not defined or is falsy.');
+
+            console.log('paramDepartement or mapRef.current is not defined ou est reconnu');
         }
-    }, [window.location.search]); 
+    }, [setDepartement]) 
     
     
     return (

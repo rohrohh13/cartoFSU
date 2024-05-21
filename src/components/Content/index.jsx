@@ -17,9 +17,6 @@ function Content () {
     
 
 
-
-    
-
     const [contributions, setContributions] = useState([])
     const [categories, setCategories] = useState([])
     const [selectedArticleIndex, setSelectedArticleIndex] = useState(false)
