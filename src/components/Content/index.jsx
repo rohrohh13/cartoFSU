@@ -14,7 +14,11 @@ function Content () {
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString);
     const paramArticle = parseInt(urlParams.get('articleId'))
+    
 
+
+
+    
 
     const [contributions, setContributions] = useState([])
     const [categories, setCategories] = useState([])
@@ -23,6 +27,7 @@ function Content () {
     const [isLoading, setIsLoading] = useState(true);
     const {currentNav, setCurrentNav, isDomSelected} = useNavStore()
 
+    
     let hasFetch = createRef()
 
     useEffect(() => {
@@ -49,6 +54,8 @@ function Content () {
     }, [contributions])
 
 
+
+    
     const fetchData = async () => {
         console.log('fetch')
         const contribs = [];
