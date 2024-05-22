@@ -205,7 +205,6 @@ const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarque
 
     useEffect(() => {
 
-
         console.log('Departement Code:', paramDepartement);
 
         if (paramDepartement && mapRef.current) {
@@ -267,7 +266,7 @@ const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarque
                         icon = Stage;
                     } else if (contribution.categoriesName === "Ris") {
                         icon = Ris;
-                    } else if (contribution.categoriesName === "Manifestation / Rassemblement") {
+                    } else if (contribution.categoriesName === "Rassemblement - Manifestation") {
                         icon = Manif;
                     } else if (contribution.categoriesName === "Conférence de presse") {
                         icon = Conference;

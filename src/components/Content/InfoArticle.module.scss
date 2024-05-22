@@ -6,6 +6,10 @@
     padding-bottom: 115px;
     padding: 30px;
     padding-bottom: 0px;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
     .infoContainerFlex {
         display: flex;
         .containerInfoDeux {

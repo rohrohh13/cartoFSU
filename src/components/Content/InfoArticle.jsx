@@ -56,7 +56,7 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
         <path d="M10.025 14.2317L9.2627 12.9255" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12.4556 10.2348V14.2348" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
         </svg> ,
-        "Manifestation / Rassemblement": <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        "Rassemblement - Manifestation": <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.89307 3.43542H3.38073V5.94775V26.0464V28.5588H5.89307H25.9917H28.5041V26.0464V5.94775V3.43542H25.9917H5.89307Z" fill="#" stroke="#" stroke-width="5.02467"/>
         <path d="M9.66138 23.5341V10.9724" stroke="black" stroke-width="1.25617" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M9.66138 19.8314C14.2293 15.7087 17.6552 23.9542 22.223 19.8314V10.9062C17.6552 15.0289 14.2293 6.78347 9.66138 10.9062" stroke="black" stroke-width="1.25617" stroke-linecap="round" stroke-linejoin="round"/>
