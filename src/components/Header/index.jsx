@@ -10,7 +10,7 @@ function Header() {
         <header className={styles.header}>
             <div>
                 <img className={styles.logo} src={logo} alt={"FSU"} />
-                <h1>Information, mobilisation, action, <br/>formation : tous les événements</h1>
+                <h1>Information, mobilisation, <br/>action : tous les événements</h1>
                 <p>SUR LE TERRAIN !</p>
             </div>
             <Nav/>  
