@@ -15,7 +15,7 @@ import departementsJson from '../../geojson/departements.json'
 import { MapContainer, TileLayer, Marker, ZoomControl,Popup,GeoJSON,Tooltip } from 'react-leaflet'
 import styles from './Map.module.scss'
 
-const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarqueur, selectedArticleIndex, isDomSelected }) => {
+const Map = ({contributions, selectedCategoriesId, onClickMarqueur, selectedArticleIndex, isDomSelected }) => {
     const BoatIcon = L.icon({
         iconUrl: marqueur,
         iconSize: [24,30],
@@ -204,13 +204,12 @@ const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarque
     useEffect(() => {
 
         console.log('Departement Code:', paramDepartement);
-
+        console.log('mapref : ', mapRef.current)
         if (paramDepartement && mapRef.current) {
             console.log('paramDepartement is defined and mapRef.current is not null.');
             console.log('Departement Code:', paramDepartement); 
             const location = departementLocations[paramDepartement];
 
-  
             if (location) {
                 console.log('Location found for departement code:', paramDepartement);
                 mapRef.current.flyTo([location.lat, location.lng], location.zoom);
@@ -219,12 +218,9 @@ const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarque
                 console.log("Le code du département n'est pas reconnu.");
             }
         } else {
-
-
             console.log('paramDepartement or mapRef.current is not defined ou est reconnu');
         }
-    }, [setDepartement]) 
-    
+    }, [mapRef.current])
     
     return (
         <MapContainer attributionControl={false} className={styles.container} center={[46.227638, 2.213749]} zoom={6} minZoom={3} maxZoom={15} scrollWheelZoom={true} zoomControl={false} ref={mapRef}>
