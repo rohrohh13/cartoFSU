@@ -27,10 +27,10 @@ const TeaseArticle = ({article}) => {
     const categoryImages = {
       "Audience": [audienceUn, audienceDeux, audienceTrois, audienceQuatre],
       "Tour de France des écoles": [defaultImage, franceDeux, franceTrois],  // Ajout de defaultImage au cas où il manque une image
-      "Manifestation": [manifUn, manifDeux, manifTrois, manifQuatre],
+      "Manifestation / Rassemblement": [manifUn, manifDeux, manifTrois, manifQuatre],
       "Conférence de presse": [presseUn, presseDeux, presseTrois, presseQuatre],
       "Réunion publique": [reunionUn, reunionDeux, reunionTrois],
-      "Stage": [stageUn, stageDeux, stageTrois],
+      "Stage / Ris": [stageUn, stageDeux, stageTrois],
       "Tractage": [tractageUn],
       "default": [defaultImage], // Utilisez l'image par défaut si aucune catégorie ne correspond
     };

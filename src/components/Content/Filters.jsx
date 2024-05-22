@@ -36,20 +36,13 @@ const Filters = ({categories, selectedCategoriesId, onSelected, unSelect}) => {
         <path d="M8.13412 17.2427C9.20355 17.2427 10.0705 16.3829 10.0705 15.3224C10.0705 14.2618 9.20355 13.4021 8.13412 13.4021C7.06469 13.4021 6.19775 14.2618 6.19775 15.3224C6.19775 16.3829 7.06469 17.2427 8.13412 17.2427Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M16.3637 11.4818H13.9433L12.0069 9.56152L10.0706 11.4818L12.491 13.8822V16.7626" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>,
-        "Stage": <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        "Stage / Ris": <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M22 4V2H20H4H2V4V20V22H4H20H22V20V4Z" fill="#" stroke="#" stroke-width="4"/>
         <path d="M10.4462 14.4273C11.5461 14.4273 12.4376 13.5604 12.4376 12.4909C12.4376 11.4215 11.5461 10.5546 10.4462 10.5546C9.34641 10.5546 8.45483 11.4215 8.45483 12.4909C8.45483 13.5604 9.34641 14.4273 10.4462 14.4273Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M7.2967 16.3637C7.57914 15.7838 8.02507 15.2939 8.58261 14.9508C9.14016 14.6077 9.78641 14.4256 10.4462 14.4256C11.106 14.4256 11.7523 14.6077 12.3098 14.9508C12.8674 15.2939 13.3133 15.7838 13.5958 16.3637H17.4161C17.5482 16.3637 17.6748 16.3127 17.7682 16.2219C17.8615 16.1311 17.914 16.008 17.914 15.8796V7.16592C17.914 7.03753 17.8615 6.9144 17.7682 6.82361C17.6748 6.73283 17.5482 6.68182 17.4161 6.68182H6.46343C6.33139 6.68182 6.20476 6.73283 6.11139 6.82361C6.01803 6.9144 5.96558 7.03753 5.96558 7.16592V15.8796C5.96558 16.008 6.01803 16.1311 6.11139 16.2219C6.20476 16.3127 6.33139 16.3637 6.46343 16.3637H7.2967Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M14.9269 14.4273H15.9226V8.61819H7.95703V9.58638" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>,
-        "RIS": <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M22 4V2H20H4H2V4V20V22H4H20H22V20V4Z" fill="#" stroke="#" stroke-width="4"/>
-        <path d="M16.6706 10.3488C16.6706 10.3488 14.627 9.7935 14.4625 11.1339C14.2979 12.4743 17.131 11.8562 16.947 13.3264C16.7755 14.6939 14.7402 14.1115 14.7402 14.1115" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M7.45557 13.0897H8.59753C8.97611 13.0897 9.33919 12.9393 9.60689 12.6716C9.87459 12.4039 10.025 12.0408 10.025 11.6622C10.025 11.2836 9.87459 10.9206 9.60689 10.6529C9.33919 10.3852 8.97611 10.2348 8.59753 10.2348H7.45557V14.2316" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M10.025 14.2317L9.2627 12.9255" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M12.4556 10.2348V14.2348" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg> ,
-        "Rassemblement - Manifestation": <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        "Manifestation / Rassemblement": <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.89307 3.43542H3.38073V5.94775V26.0464V28.5588H5.89307H25.9917H28.5041V26.0464V5.94775V3.43542H25.9917H5.89307Z" fill="#" stroke="#" stroke-width="5.02467"/>
         <path d="M9.66138 23.5341V10.9724" stroke="black" stroke-width="1.25617" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M9.66138 19.8314C14.2293 15.7087 17.6552 23.9542 22.223 19.8314V10.9062C17.6552 15.0289 14.2293 6.78347 9.66138 10.9062" stroke="black" stroke-width="1.25617" stroke-linecap="round" stroke-linejoin="round"/>

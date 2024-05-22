@@ -70,8 +70,6 @@ const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarque
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const paramDepartement = parseInt(urlParams.get('departementCode'));
-
-
     const departementLocations = {
         "01": { name: "Ain", lat: 46.25, lng: 5.75, zoom: 10 },
         "02": { name: "Aisne", lat: 49, lng: 3.5, zoom: 9 },
@@ -261,11 +259,9 @@ const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarque
                         icon = Audience;
                     } else if (contribution.categoriesName === "Tour de France des écoles") {
                         icon = Tour;
-                    } else if (contribution.categoriesName === "Stage") {
-                        icon = Stage;
-                    } else if (contribution.categoriesName === "Ris") {
-                        icon = Ris;
-                    } else if (contribution.categoriesName === "Rassemblement - Manifestation") {
+                    } else if (contribution.categoriesName === "Stage / Ris") {
+                        icon = Stage;s
+                    } else if (contribution.categoriesName === "Manifestation / Rassemblement") {
                         icon = Manif;
                     } else if (contribution.categoriesName === "Conférence de presse") {
                         icon = Conference;
