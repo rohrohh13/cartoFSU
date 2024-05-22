@@ -129,8 +129,7 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                     
                                 {etatArticle}
                         </div>
-                    </div>
-                    
+                    </div>  
                     <div className={styles.titleContainer}>
                         <h2>{parse(contribution.title)}</h2>                         
                     </div>
@@ -151,9 +150,10 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                                 </svg> 
                             </div>
                             <div>
-                                {moment(contribution.date, 'DD/MM/YYYY').format('Do MMMM YYYY')} - {contribution.heure.slice(0, -3)}
+                                {moment(contribution.date, 'DD/MM/YYYY').format('Do MMMM YYYY')} - {contribution.heure}
                             </div>           
                         </div>
+
 
                         )}
                         { contribution.adresse && (
