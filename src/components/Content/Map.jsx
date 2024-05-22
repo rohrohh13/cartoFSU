@@ -250,8 +250,7 @@ const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarque
                        if(!isDom) return null
                     } else {
                         if(isDom) return null
-                    }
-                    
+                    } 
                     let icon;
                     // Logique pour choisir l'icône en fonction du nom de la catégorie
                     if (contribution.categoriesName === "Tractage") {

@@ -5,13 +5,49 @@ import 'moment/dist/locale/fr'
 
 moment.locale('fr')
 import defaultImage from '../../assets/sans-image.jpg';
+import audienceUn from '../../assets/audience-un-min.jpg';
+import audienceDeux from '../../assets/audience-deux-min.jpg';
+import audienceTrois from '../../assets/audience-trois-min.jpg';
+import audienceQuatre from '../../assets/audience-quatre-min.jpg';
+import franceDeux from '../../assets/france-deux-min.jpg';
+import franceTrois from '../../assets/france-trois-min.jpg';
+import manifUn from '../../assets/manif-un-min.jpg';
+import manifDeux from '../../assets/manif-deux-min.jpg';
+import manifTrois from '../../assets/manif-trois-min.jpg';
+import manifQuatre from '../../assets/manif-quatre-min.jpg';
+import presseUn from '../../assets/presse-un-min.jpg';
+import presseDeux from '../../assets/presse-deux-min.jpg';
+import presseTrois from '../../assets/presse-trois-min.jpg';
+import presseQuatre from '../../assets/presse-quatre-min.jpg';
+import reunionUn from '../../assets/reunion-un-min.jpg';
+import reunionDeux from '../../assets/reunion-deux-min.jpg';
+import reunionTrois from '../../assets/reunion-trois-min.jpg';
+import stageUn from '../../assets/stage-un-min.jpg';
+import stageDeux from '../../assets/stage-deux-min.jpg';
+import stageTrois from '../../assets/stage-trois-min.jpg';
+import tractageUn from '../../assets/tractage-un-min.jpg';
+
+
 import DrawerWrapper from './DrawerWrapper';
 import styles from './InfoArticle.module.scss'
 
 const InfoArticle = ({ contribution, onClose, onNext }) => {
 
-
-
+    const categoryImages = {
+        "Audience": [audienceUn, audienceDeux, audienceTrois, audienceQuatre],
+        "Tour de France des écoles": [defaultImage, franceDeux, franceTrois],  // Ajout de defaultImage au cas où il manque une image
+        "Manifestation": [manifUn, manifDeux, manifTrois, manifQuatre],
+        "Conférence de presse": [presseUn, presseDeux, presseTrois, presseQuatre],
+        "Réunion publique": [reunionUn, reunionDeux, reunionTrois],
+        "Stage": [stageUn, stageDeux, stageTrois],
+        "Tractage": [tractageUn],
+        "default": [defaultImage], // Utilisez l'image par défaut si aucune catégorie ne correspond
+      };
+      const getRandomImage = (category) => {
+        const images = categoryImages[category] || categoryImages["default"];
+        const randomIndex = Math.floor(Math.random() * images.length);
+        return images[randomIndex];
+      };
 
     const categorySVGs = {
         "Tractage": <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -105,7 +141,7 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
             window.open(`https://api.whatsapp.com/send?text=https%3A%2F%2Ffsucarte.netlify.app%2F%3FarticleId%3D${contribution.id}`);
           };
           
-
+          const imageUrl = contribution.image || getRandomImage(contribution.categoriesName);
     return (
 
 
@@ -133,7 +169,7 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                     <div className={styles.titleContainer}>
                         <h2>{parse(contribution.title)}</h2>                         
                     </div>
-                    <img src={contribution.image || defaultImage} alt="Article" />
+                    <img src={imageUrl} alt="Article" />
                     <div className={styles.infoArticleContainerContent}>
                         {parse(contribution.departement)}
                     </div>                    
