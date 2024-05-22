@@ -18,8 +18,8 @@ import styles from './Map.module.scss'
 const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarqueur, selectedArticleIndex, isDomSelected }) => {
     const BoatIcon = L.icon({
         iconUrl: marqueur,
-        iconSize: [25,41],
-        iconAnchor: [12, 41],
+        iconSize: [24,30],
+        iconAnchor: [12, 30],
     });
     const Assemble = L.icon({
         iconUrl: marqueurUn,
