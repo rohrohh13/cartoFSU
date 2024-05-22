@@ -26,7 +26,7 @@ const TeaseArticle = ({article}) => {
 
     const categoryImages = {
       "Audience": [audienceUn, audienceDeux, audienceTrois, audienceQuatre],
-      "Tour de France des écoles": [defaultImage, franceDeux, franceTrois],  // Ajout de defaultImage au cas où il manque une image
+      "Tour de France des écoles": [franceDeux, franceTrois],  // Ajout de defaultImage au cas où il manque une image
       "Manifestation / Rassemblement": [manifUn, manifDeux, manifTrois, manifQuatre],
       "Conférence de presse": [presseUn, presseDeux, presseTrois, presseQuatre],
       "Réunion publique": [reunionUn, reunionDeux, reunionTrois],
