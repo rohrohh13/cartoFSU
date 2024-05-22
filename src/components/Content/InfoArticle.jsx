@@ -178,7 +178,7 @@ const InfoArticle = ({ contribution, onClose, onNext }) => {
                     )}
                     { contribution.lien && (
                         <div className={styles.infoArticleLien}>
-                            <a href={contribution.lien}>En savoir plus</a>
+                            <a target='_blank' href={contribution.lien}>En savoir plus</a>
                         </div>
                     )}
                     <div className={styles.blocPartageArticle}>
