@@ -270,7 +270,6 @@ const Map = ({setDepartement, contributions, selectedCategoriesId, onClickMarque
                     } else {
                         icon = BoatIcon;
                     }
-
                     if(selectedCategoriesId.length === 0 || selectedCategoriesId.some((catId) => contribution.categories === catId)) {
                         return <Marker icon={icon} eventHandlers={{ click: () => onClickMarqueur(index), mouseover: (event) => event.target.openPopup(), mouseout: (event) => event.target.closePopup()}} key={index} position={[contribution.latlong.lat, contribution.latlong.lng]}><Popup><div className={styles.popupContainer}><div className={styles.containerInfo}><div>{contribution.categories.typeAction}</div><h2>{parse(contribution.title)}</h2><h3>{contribution.subtitle}</h3></div></div></Popup></Marker>
                     }
