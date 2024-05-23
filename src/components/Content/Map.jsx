@@ -256,7 +256,7 @@ const Map = ({contributions, selectedCategoriesId, onClickMarqueur, selectedArti
                     } else if (contribution.categoriesName === "Tour de France des écoles") {
                         icon = Tour;
                     } else if (contribution.categoriesName === "Stage / Ris") {
-                        icon = Stage;s
+                        icon = Stage;
                     } else if (contribution.categoriesName === "Manifestation / Rassemblement") {
                         icon = Manif;
                     } else if (contribution.categoriesName === "Conférence de presse") {
