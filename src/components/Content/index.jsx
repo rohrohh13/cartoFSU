@@ -93,7 +93,7 @@ function Content () {
                         }
                     }));
                     contribs.push(...formatedContribs)
-                    if(data.length < 100) {
+                    if(data.length < 500) {
                         hasNextPage = false
                     } else {
                         currentPage++;
