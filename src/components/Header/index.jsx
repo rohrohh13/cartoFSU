@@ -1,5 +1,5 @@
 import logo from '../../assets/logo-fsu.png'
-import { Popper } from '@mui/base/Popper';
+import Popper from '@mui/material/Popper';
 import { styled, css } from '@mui/system';
 import styles from './Header.module.scss'
 import Nav from './Nav'
